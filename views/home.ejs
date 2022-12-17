@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+    <h1>Home</h1>
+    <p><%= homeStartingContent %></p>
+
+
+<!-- Start of post here -->
+<% for(let i=0; i < postsreal.length; i++){ %>
+<!-- Post title inside the <h1> -->
+    <h1> <%= postsreal[i].title %> </h1>
+
+    <p>
+        <% let postid = postsreal[i]._id; %>
+        <%= postsreal[i].content + " ..."%>   
+    <!-- Post content here substring(0, 100) concatenate " ..." -->  
+    <a href="/readmore/<%= postid%>" >Read More</a>
+    </p>
+<% }; %>
+<%- include('partials/footer') %>

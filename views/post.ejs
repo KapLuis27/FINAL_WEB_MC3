@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+    <!-- The title must be inside the <h1> tag and the content inside the <p> tag -->
+        <% console.log(result);%>
+    <h1> <%= result.title%></h1>
+    <p> <%= result.content%></p>
+    
+    <div class="time">
+        <p>Created at: <%= result.createdAt%> </p>
+        <p>Updated at: <%= result.updatedAt%></p>
+    </div>
+
+    <a href = "/edit/<%=result._id%>"class="btn btn-sm btn-primary">Edit</a>
+    <a href = "/delete/<%=result._id%>"class="btn btn-sm btn-danger">Delete</a>
+    <%- include('partials/footer') %>
